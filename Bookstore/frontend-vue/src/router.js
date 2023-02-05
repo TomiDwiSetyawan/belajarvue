@@ -5,11 +5,11 @@ import ManajemenBuku from "./components/ManajemenBuku.vue";
 const routes = [
     {
         path: "/",
-        compontent: HelloWorld,
+        component: HelloWorld,
     },
     {
         path: "/manajemen-buku",
-        compontent: ManajemenBuku,
+        component: ManajemenBuku,
     },
 ]
 

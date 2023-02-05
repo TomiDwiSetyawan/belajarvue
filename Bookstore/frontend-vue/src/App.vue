@@ -1,6 +1,6 @@
 <template>
   <Navbar />
-  <router-view/>      
+  <router-view @fromChild="retrieve" :fromParent="dataNama"/>      
 </template>
 
 <script>
@@ -10,6 +10,17 @@ export default {
   name: 'App',
   components: { 
     Navbar
+  },
+  data(){
+    return{
+      dataNama: ""
+    }
+  },
+  methods: {
+    retrieve(namamu){
+      this.dataNama = namamu;
+      alert("Nama diterima " + this.dataNama)
+    }
   }
 }
 </script>

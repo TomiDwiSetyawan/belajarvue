@@ -5,6 +5,7 @@
     <input type="text" placeholder="input your name .."  v-model="namamu">
     <p>{{ namamu }}</p>
     <button @click="greet(namamu)">Say Hi</button>
+    <button @click="pass(namamu)">Send to manajemen</button>
     <!-- <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
@@ -49,6 +50,9 @@ export default {
   methods: {
     greet(namamu) {
       alert("Hello! " + namamu)
+    },
+    pass(namamu){
+      this.$emit("fromChild", namamu)
     }
   }
 }
